@@ -1,4 +1,14 @@
-# BoomMenu [![What I've Done](https://github.com/Nightonke/What-I-ve-Done/blob/master/what_i_ve_done.png?raw=true)](https://github.com/Nightonke/What-I-ve-Done)
+# BoomMenu 
+[![WoWoViewPager](https://github.com/Nightonke/WoWoViewPager/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/WoWoViewPager)
+[![BoomMenu](https://github.com/Nightonke/BoomMenu/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/BoomMenu)
+[![CoCoin](https://github.com/Nightonke/CoCoin/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/CoCoin)
+[![BlurLockView](https://github.com/Nightonke/BlurLockView/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/BlurLockView)
+[![LeeCo](https://github.com/Nightonke/LeeCo/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/LeeCo)
+[![GithubWidget](https://github.com/Nightonke/GithubWidget/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/GithubWidget)
+[![JellyToggleButton](https://github.com/Nightonke/JellyToggleButton/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/JellyToggleButton)
+[![FaceOffToggleButton](https://github.com/Nightonke/FaceOffToggleButton/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png?raw=true)](https://github.com/Nightonke/FaceOffToggleButton)
+
+###此README只适用于V1.0.9或以下，推荐使用新版本，[新版本的使用方法](https://github.com/Nightonke/BoomMenu/wiki)
 
 是否觉得这种菜单按钮有点无聊？
 
@@ -9,7 +19,11 @@
 ![Circle](https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_circle.gif?raw=true)
 ![Ham](https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_ham.gif?raw=true)
 
-BoomMenu可以让你的菜单按钮 ... 瞬间爆炸！
+![List](https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_list.gif?raw=true)
+![Share](https://github.com/Nightonke/BoomMenu/blob/master/Pictures/show_share.gif?raw=true)
+
+BoomMenu可以让你的菜单按钮 ... 瞬间爆炸！  
+想看看iOS版本吗？戳[我](https://github.com/Nightonke/VHBoomMenuButton)
 
 # 目录
 
@@ -23,6 +37,9 @@ BoomMenu可以让你的菜单按钮 ... 瞬间爆炸！
 1. [Easy to Use in 3 Steps](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#easy-to-use-in-3-steps)
 2. [Use in Action Bar](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-in-action-bar)
 3. [Use in Floating Action Button](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-in-floating-action-button)
+4. [Use in List](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-in-list)
+5. [Use in Share Style](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-in-share-style)
+6. [Use with Builder](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-with-builder)
 4. [Hamburger Button and Circle Button](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#hamburger-button-and-circle-button)
 5. [Number of Sub Buttons](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#number-of-sub-buttons)
 6. [Boom Types](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#boom-types)
@@ -48,11 +65,11 @@ BoomMenu可以让你的菜单按钮 ... 瞬间爆炸！
 [License](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#license)  
 
 # Gradle and Maven
-添加 "compile 'com.nightonke:boommenu:1.0.3'" 到app模块中的build.gradle即可：  
+添加 "compile 'com.nightonke:boommenu:1.0.9'" 到app模块中的build.gradle即可：  
 ```
 dependencies {
     ...
-    compile 'com.nightonke:boommenu:1.0.3'
+    compile 'com.nightonke:boommenu:1.0.9'
     ...
 }
 ```
@@ -61,24 +78,24 @@ dependencies {
 <dependency>
   <groupId>com.nightonke</groupId>
   <artifactId>boommenu</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.9</version>
   <type>pom</type>
 </dependency>
 ```
 
 # Note
 1. 使用了 [dmytrodanylyk-ShadowLayout](https://github.com/dmytrodanylyk/shadow-layout) 来为按钮产生阴影效果。
-2. BoomMenuButton现在还**没可以**用于listview中，因为bitmap回收处理没有弄好。但是这并**不影响**在ActionBar或者FloatingActionButton里面使用。如果有人知道这个bug怎么解决，请提交你的代码，万分感谢！
+2. BoomMenuButton在1.0.4版本开始已经可以在列表中使用。
 
 # Demo
 你可以在这个demo中选择绝大部分的BoomMenuButton的选项来查看其不同的效果。当你查看demo的MainActivity的时候，不用担心里面过长的代码，很多代码都是为了处理RadioGroup的逻辑。   
 
-![Boom V1.0.3](https://github.com/Nightonke/BoomMenu/blob/master/Apk/BoomMenu%20V1.0.3.png)  
+![Boom V1.0.9](https://github.com/Nightonke/BoomMenu/blob/master/Apk/BoomMenu%20V1.0.9.png)  
 
 通过链接下载：  
 
-[Boom V1.0.3 in Github](https://github.com/Nightonke/BoomMenu/blob/master/Apk/BoomMenu%20V1.0.3.apk?raw=true)  
-[Boom V1.0.3 in Fir](http://fir.im/tv85)  
+[Boom V1.0.9 in Github](https://github.com/Nightonke/BoomMenu/blob/master/Apk/BoomMenu%20V1.0.9.apk?raw=true)  
+[Boom V1.0.9 in Fir](http://fir.im/tv85)  
 
 # Usage
 
@@ -109,7 +126,7 @@ boomMenuButton = (BoomMenuButton)findViewById(R.id.boom);
 **3.**在onWindowFocusChanged()方法中初始化BoomMenuButton：
 ```java
 @Override
-onWindowFocusChanged(boolean hasFocus) {
+public void onWindowFocusChanged(boolean hasFocus) {
     super.onWindowFocusChanged(hasFocus);
     
     boomMenuButton.init(
@@ -213,8 +230,142 @@ protected void onCreate(Bundle savedInstanceState) {
 | 参数    | 类型    | 干啥的   |
 | ------------- |-------------| -----|
 | app:boom_inActionBar | boolean |真，表示应用在ActionBar中 |
+| app:boom_inList | boolean | true for boom menu button in list |
 | app:boom_button_color | color | BoomMenuButton的背景色，仅仅在FloatingActionButton中有效 |
 | app:boom_button_pressed_color | color | BoomMenuButton的按下背景颜色，仅仅在点击效果为Normal时有效 |
+
+
+### Use in List
+
+如何在列表中使用BoomMenuButton：
+
+**1**.自定义列表子项布局：
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        />
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/boom_circle"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        app:boom_inList="true"
+        />
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/boom_ham"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        app:boom_inList="true"
+        />
+
+</LinearLayout>
+```
+**2**.在adapter中用延迟初始化按钮：
+```java
+@Override
+public View getView(int position, View convertView, final ViewGroup parent) {
+
+    ...
+
+    viewHolder.circleBoomMenuButton.postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            viewHolder.circleBoomMenuButton.init(
+                    circleSubButtonDrawables, // The drawables of images of sub buttons. Can not be null.
+                    circleSubButtonTexts,     // The texts of sub buttons, ok to be null.
+                    subButtonColors,          // The colors of sub buttons, including pressed-state and normal-state.
+                    ButtonType.CIRCLE,        // The button type.
+                    BoomType.PARABOLA,        // The boom type.
+                    PlaceType.CIRCLE_3_1,     // The place type.
+                    null,                     // Ease type to move the sub buttons when showing.
+                    null,                     // Ease type to scale the sub buttons when showing.
+                    null,                     // Ease type to rotate the sub buttons when showing.
+                    null,                     // Ease type to move the sub buttons when dismissing.
+                    null,                     // Ease type to scale the sub buttons when dismissing.
+                    null,                     // Ease type to rotate the sub buttons when dismissing.
+                    null                      // Rotation degree.
+            );
+            viewHolder.hamBoomMenuButton.setSubButtonShadowOffset(
+                    Util.getInstance().dp2px(2), Util.getInstance().dp2px(2));
+            viewHolder.circleBoomMenuButton.setSubButtonShadowOffset(
+                    Util.getInstance().dp2px(2), Util.getInstance().dp2px(2));
+        }
+    }, 1);
+
+    ...
+    
+}
+```
+更多信息请查看[代码](https://github.com/Nightonke/BoomMenu/blob/master/app/src/main/java/com/nightonke/boommenusample/ListViewActivity.java)
+
+### Use in Share Style
+
+分享风格的按钮在版本1.0.6已经可以使用，效果就像开篇的gif。只需要把place type改成```PlaceType.SHARE_X_X```即可，demo中有分享风格按钮的所有示例。可以用 ```setShareLineWidth(float width)``` 来设置分享按钮中线段的宽度，或者用 ```setShareLine1Color(int color)``` 和 ```setShareLine2Color(int color)``` 来改变线段的颜色。
+
+更多信息请查看[代码](https://github.com/Nightonke/BoomMenu/blob/master/app/src/main/java/com/nightonke/boommenusample/ShareActivity.java)
+
+### Use with Builder
+
+感谢 @demolot 提醒我使用Builder来初始化BMB。现在BMB已经支持Builder初始化。
+```
+@Override
+public void onWindowFocusChanged(boolean hasFocus) {
+    super.onWindowFocusChanged(hasFocus);
+
+    // this is an example to show how to use the builder
+    new BoomMenuButton.Builder()
+            // set all sub buttons with subButtons method
+            //.subButtons(subButtonDrawables, subButtonColors, subButtonTexts)
+            // or add each sub button with addSubButton method
+            .addSubButton(this, R.drawable.boom, subButtonColors[0], "BoomMenuButton")
+            .addSubButton(this, R.drawable.java, subButtonColors[1], "View source code")
+            .addSubButton(this, R.drawable.github, subButtonColors[2], "Follow me")
+            .frames(80)
+            .duration(800)
+            .delay(100)
+            .showOrder(OrderType.RANDOM)
+            .hideOrder(OrderType.RANDOM)
+            .button(ButtonType.HAM)
+            .boom(BoomType.PARABOLA_2)
+            .place(PlaceType.HAM_3_1)
+            .showMoveEase(EaseType.EaseOutBack)
+            .hideMoveEase(EaseType.EaseOutCirc)
+            .showScaleEase(EaseType.EaseOutBack)
+            .hideScaleType(EaseType.EaseOutCirc)
+            .rotateDegree(720)
+            .showRotateEase(EaseType.EaseOutBack)
+            .hideRotateType(EaseType.Linear)
+            .autoDismiss(true)
+            .cancelable(true)
+            .dim(DimType.DIM_6)
+            .clickEffect(ClickEffectType.RIPPLE)
+            .boomButtonShadow(Util.getInstance().dp2px(2), Util.getInstance().dp2px(2))
+            .subButtonsShadow(Util.getInstance().dp2px(2), Util.getInstance().dp2px(2))
+            .subButtonTextColor(Color.BLACK)
+            .onBoomButtonBlick(null)
+            .animator(null)
+            .onSubButtonClick(null)
+            // this only work when the place type is SHARE_X_X
+            .shareStyle(0, 0, 0)
+            .init(boomMenuButton);
+}
+```
+
+更多信息请查看[代码](https://github.com/Nightonke/BoomMenu/blob/master/app/src/main/java/com/nightonke/boommenusample/BuilderActivity.java)
 
 ### Hamburger Button and Circle Button
 在BMB(BoomMenuButton)中有两种子按钮类型，Hamburger和circle。你可以使用 ```ButtonType.HAM``` 和 ```ButtonType.CIRCLE``` 来初始化BMB。 
@@ -378,10 +529,23 @@ TextView[] getTextViews();
 修复在lollipop版本之下运行崩溃的错误。
 ### 1.0.3
 修复在Android4.0版本中出现的圆形子按钮图片背景色为黑色的bug。
+### 1.0.4
+BMB已经可以在列表中使用。
+### 1.0.5
+分享风格按钮。
+### 1.0.6
+分享风格按钮相关设置。
+### 1.0.7
+感谢 @hisham2007 发现的RTL模式下的bug。现在BMB已经可以正常支持RTL模式。  
+感谢 @demolot 提醒我用Builder来初始化BMB。更多信息，请查看[Use with BMB](https://github.com/Nightonke/BoomMenu/blob/master/README-ZH.md#use-with-builder)。
+### 1.0.8
+试图解决一下内存优化的issue，不知是否然并卵。
+### 1.0.9
+试图解决空指针的issue，不知是否然并卵。
 
 # Todo
 1. 粒子效果。
-2. 让BMB可以在listview中使用。  
+2. ~~让BMB可以在listview中使用~~。  
 
 # License
 
