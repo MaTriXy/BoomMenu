@@ -21,6 +21,8 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.StateSet;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -100,6 +102,30 @@ public class Util {
         }
     }
 
+    public static void setDrawable(ImageView image, int id, Drawable drawable) {
+        if (image == null) return;
+        if (id == 0) {
+            if (drawable != null) image.setImageDrawable(drawable);
+        } else image.setImageResource(id);
+    }
+
+    public static void setText(TextView textView, int id, String text) {
+        if (textView == null) return;
+        if (id == 0) {
+            if (text != null && !text.equals(textView.getText())) textView.setText(text);
+        } else {
+            CharSequence oldText = textView.getContext().getResources().getText(id);
+            if (!oldText.equals(textView.getText())) textView.setText(id);
+        }
+    }
+
+    public static void setTextColor(TextView textView, int id, int color) {
+        if (textView == null) return;
+        if (id == 0) {
+            textView.setTextColor(color);
+        } else textView.setTextColor(getColor(textView.getContext(), id));
+    }
+
     public static Drawable getDrawable(View view, int id) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return view.getResources().getDrawable(id, null);
@@ -118,6 +144,9 @@ public class Util {
     }
 
     public static BitmapDrawable getOvalBitmapDrawable(View view, int radius, int color) {
+        if (radius <= 0) {
+            return null;
+        }
         Bitmap bitmap = Bitmap.createBitmap(
                 2 * radius,
                 2 * radius,
@@ -143,6 +172,9 @@ public class Util {
     }
 
     public static BitmapDrawable getRectangleBitmapDrawable(View view, int width, int height, int cornerRadius, int color) {
+        if (width <= 0 || height <= 0) {
+            return null;
+        }
         Bitmap bitmap = Bitmap.createBitmap(
                 width,
                 height,
@@ -280,8 +312,8 @@ public class Util {
         }
     }
 
-    public static int getColor(Context context, Integer id, int color) {
-        if (id == null) return color;
+    public static int getColor(Context context, int id, int color) {
+        if (id == 0) return color;
         else return getColor(context, id);
     }
 

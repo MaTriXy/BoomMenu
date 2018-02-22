@@ -49,6 +49,13 @@
                 />
 
             <Button
+                android:id="@+id/square_and_piece_corner_radius_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/square_and_piece_corner_radius_example"
+                />
+
+            <Button
                 android:id="@+id/boom_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,6 +81,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/actionbar_example"
+                />
+
+            <Button
+                android:id="@+id/tool_bar_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tool_bar_example"
+                />
+
+            <Button
+                android:id="@+id/draggable_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/draggable_example"
                 />
 
             <Button
@@ -123,6 +144,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fragment_example"
+                />
+
+            <Button
+                android:id="@+id/change_boom_button_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_boom_button_example"
+                />
+
+            <Button
+                android:id="@+id/three_d_animation_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/three_d_animation_example"
+                />
+
+            <Button
+                android:id="@+id/custom_position_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_position_example"
+                />
+
+            <Button
+                android:id="@+id/fade_views_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fade_views_example"
+                />
+
+            <Button
+                android:id="@+id/orientation_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/orientation_example"
                 />
 
         </LinearLayout>

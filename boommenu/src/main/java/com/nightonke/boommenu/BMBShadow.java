@@ -11,7 +11,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-
 /**
  * Created by Weiping Huang at 19:09 on 16/11/6
  * For Personal Open Source
@@ -63,6 +62,7 @@ public class BMBShadow extends FrameLayout {
     private void createShadow() {
         if (shadowEffect) {
             Bitmap shadowBitmap = createShadowBitmap();
+            if (shadowBitmap == null) return;
             BitmapDrawable shadowDrawable = new BitmapDrawable(getResources(), shadowBitmap);
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.JELLY_BEAN) {
                 //noinspection deprecation
@@ -76,7 +76,12 @@ public class BMBShadow extends FrameLayout {
     }
 
     private Bitmap createShadowBitmap() {
-        Bitmap shadowBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ALPHA_8);
+        Bitmap shadowBitmap;
+        if (getWidth() > 0 && getHeight() > 0) {
+            shadowBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ALPHA_8);
+        } else {
+            return null;
+        }
         Canvas canvas = new Canvas(shadowBitmap);
         RectF shadowRect = new RectF(
                 shadowRadius + Math.abs(shadowOffsetX),
